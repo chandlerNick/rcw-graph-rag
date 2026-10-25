@@ -143,26 +143,3 @@ respect its terms, rate limits, and applicable data-use requirements.
 
 Local `.env` files and Streamlit secrets are also Git-ignored. Never commit API
 keys or other credentials.
-
-## Publishing to GitHub
-
-After reviewing the files that Git will include, create an empty repository on
-GitHub, then connect this local repository and push:
-
-```bash
-git add .gitignore .python-version README.md pyproject.toml uv.lock .streamlit src
-git status
-git commit -m "Prepare RCW GraphRAG project"
-git remote add origin https://github.com/<your-account>/<repository>.git
-git push -u origin master
-```
-
-If your local branch is named `main`, replace `master` with `main` in the push
-command. Confirm that `git status` does not list `rcw_data/`, `rcw_db/`, `.env`,
-or `.streamlit/secrets.toml` before committing. The generated data stays on your
-device, and users can recreate it using the commands above.
-
-Before publishing, decide which open-source license you want. Without a license,
-others generally do not receive permission to reuse, modify, or redistribute
-your code. Also check the crawler's source site's terms and the embedding
-model's license; your repository's license cannot change those.
