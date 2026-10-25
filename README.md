@@ -5,6 +5,11 @@ It retrieves RCW sections using vector similarity, expands results through
 selected graph relationships, and asks Google Gemini to summarize and answer
 from the retrieved text.
 
+![Screenshot of the WA Law GraphRAG Assistant showing a generated summary and answer](images/homepage.png)
+
+*Example app screenshot. Verify all legal information and citations against
+current official sources.*
+
 This is a research prototype, not legal advice. The crawler currently uses an
 unofficial RCW mirror; verify answers and citations against current official
 Washington State sources.
